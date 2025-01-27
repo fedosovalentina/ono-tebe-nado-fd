@@ -1,1 +1,40 @@
-/* место для вашего кода */
+*{
+    box-sizing: border-box;
+}
+.font-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+  }
+  
+.font-content {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    max-width: 1100px;
+    height: 293;
+    justify-content: space-around;
+    align-content: center;
+   align-items: center;
+    gap: 50px;
+    font-family: 'Raleway', sans-serif;
+    list-style-type: none;
+    text-transform: lowercase;
+  }
+
+  .menu {
+    display: flex;
+    min-width:330px;
+    justify-content:space-between;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .li-circle {
+    list-style-type: circle;
+  }
+
+  .contacts {
+    align-content: center;
+  }
