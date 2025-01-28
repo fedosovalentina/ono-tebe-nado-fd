@@ -10,31 +10,61 @@
     font-family: 'Raleway', sans-serif;
   }
   
-  .header {
+.header {
     display: flex;
     max-width: 1100px;
     height: 293;
     justify-content: space-around;
     align-content: center;
-   align-items: center;
+    align-items: center;
     gap: 50px;
     font-family: 'Raleway', sans-serif;
     list-style-type: none;
     text-transform: lowercase;
+    font-size: 18px;
+    
   }
 
-  .menu {
+.menu {
     display: flex;
-    min-width:330px;
-    justify-content:space-between;
-    align-content: center;
-    align-items: center;
+    justify-content:center;
   }
   
-  .li-circle {
+.li-circle {
     list-style-type: circle;
   }
 
-  .contacts {
+.contacts {
     align-content: center;
+    overflow-wrap: break-word;
   }
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-content: top;
+    gap: 50px;
+    min-height: 180px;
+    font-family: 'Raleway', sans-serif;
+    list-style-type: none;
+    text-transform: lowercase;
+    font-size: 18px;
+  }
+
+.footer-menu {
+    text-align: center;
+  }
+
+.social {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    gap: 9px;
+   
+}
+
+.social-img-link {
+    display: flex;
+    
+    width: 18px;
+}
