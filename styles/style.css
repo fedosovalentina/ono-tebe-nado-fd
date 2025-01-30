@@ -9,20 +9,34 @@
 .header {
   display: flex;
   min-width: 1100px;
-  justify-content: space-between;
+  height: 292px;
+  justify-content: baseline;
   align-items: center;
-  padding: 50px;
+  padding: 90px 50px;
   gap: 50px;
+  position: relative;
   font-family: 'Raleway', sans-serif;
   text-transform: lowercase;
   font-size: 18px;
-  position: relative;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  word-spacing: 1px;
+  font-family: Raleway;
   }
+
+
  
 .header-menu ol {
   display: flex;
-  gap: 25px;
+  justify-content: flex-start;
+  gap: 1.6em;
   list-style-type: none;
+  }
+
+  .header-menu ol li {
+    text-indent: 0.2em;
   }
   
 .li-circle {
@@ -33,18 +47,27 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 148px;
+  max-width: 12.2%;
   text-align: center;
 }
 
 .contacts {
-  max-width: 250px;
-  line-height: 24.3px;
+  max-width: 22%;
+  line-height: 25px;
   }
 
-.link {
-  text-underline-offset: 4px;
+.header ol:nth-child(3) {
+  position: absolute;
+  left: 72%;
 }
+
+.link {
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+.main-link {
+  text-decoration: none;
+  }
 
 .adress {
   text-transform: none;
@@ -54,17 +77,17 @@
 }
 
 .hero {
-    position: relative;
-    background: url('../images/cover.jpg') no-repeat center center;
-    background-size: cover;
-    height: 757px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 100px;
-    color: white;
-    text-transform: uppercase;
+  position: relative;
+  background: url('../images/cover.jpg') no-repeat center center;
+  background-size: cover;
+  height: 757px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Важно: Поднимаем контент вверх */
+  
+  color: white;
+ 
+
   }
   
   .hero::before {
@@ -78,42 +101,64 @@
   }
   
   .hero-content {
-    position: relative;
-    z-index: 1; 
+    z-index: 1;
+    padding: 165px 50px 50px;
+    display: flex;
+    text-transform: uppercase;
   }
 
-.main-hero {
-    flex: 1;
-    font-family: Raleway;
-    font-size: 100px;
-    font-weight: 700;
-    line-height: 115px;
-    letter-spacing: 0.3em;
-    text-align: left;
-  
+.text-block-hero {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 
 }
 
-.discription-button {
+.text-block-hero p {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115px;
+  letter-spacing: 0.3em;
+
+}
+
+.text-block-hero p:nth-child(1) {
+
+  text-align: left; 
+}
+
+.text-block-hero p:nth-child(2) {
+  text-align: center; 
+}
+
+.text-block-hero p:nth-child(3) {
+  text-align: right; 
+}
+
+.discription-button-hero {
   
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-  padding: 50px 0;
+  justify-content: space-between; 
+  align-items: center; 
+  width: calc(100% - 100px);
+  /* padding: 50px; */
+  position: absolute;
+  bottom: 50px; 
+  /* left: 50px;
+  right: 50px; */
+  
+}
+
+.discription-button-hero p {
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
   text-align: left;
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  font-family: Raleway;
-
-
-
+  word-spacing: 5px;
+  margin: 0;
 }
 
-.button {
+.button-hero {
   width: 256px;
   height: 51px;
   background: transparent;
@@ -122,16 +167,10 @@
   font-size: 22px;
   font-weight: 500;
   line-height: 25.83px;
-  text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Raleway', sans-serif;
-  outline: none;
-  font-family: Raleway;
-
-
 }
 
 .custom-button:hover {
