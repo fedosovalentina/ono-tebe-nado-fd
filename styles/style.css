@@ -7,9 +7,9 @@
   opacity: 0.5;
   filter: sepia(0.2);
   pointer-events: none;
-  z-index: -1; 
+  z-index: 3;
+  mix-blend-mode: color-dodge;
 }
-
 
 body {
   display: flex;
@@ -20,7 +20,8 @@ body {
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  padding: 84px 47px;
+  height: 293px;
+  padding: 0px 47px 21px;
   margin: 0;
   align-items: center;
   font-size: 18px;
@@ -30,7 +31,6 @@ body {
 .link {
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
-  letter-spacing: 1px;
 }
 
 .main-link {
@@ -39,24 +39,21 @@ body {
 
 .header__menu {
   font-size: 18px;
-  gap: 1em; /* Исправили точку */
+  gap: 1em;
   text-indent: 0.2em;
-  letter-spacing: -0.03em; 
-  padding: 0; /* Убрали пробел */
+  padding: 0;
   text-transform: lowercase;
-  align-self: center;
-  justify-self: start;
 }
 
 .header__links-list {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.6em; 
+  gap: 1.6em;
   padding: 0;
   margin: 0;
   list-style: none;
-  letter-spacing: -0.09em; /* Убрали scaleX */
+  line-height: 22px;
 }
 
 .header__links-list-item {
@@ -65,133 +62,18 @@ body {
 
 .header__logo {
   display: block;
-  min-width: 140px;
+  width: 148px;
+  height: 105px;
+  padding: 1px 6px;
 }
 
 .header__address {
-  max-width: 400px;
+  width: 240px;
   margin: 0;
-  align-self: center;
-  line-height: 25px;
-  text-transform: none;
-  padding-left: 50px;
-  margin-left: 30px;
-}
-
-
-
-/* header — вся шапка;
-header__menu — контейнер навигации;
-header__links-list — список ссылок;
-header__links-list-item — пункт списка ссылок;
-header__links-list-item_no-bullit — этот класс может потребоваться, чтобы сделать ссылку без кружочка;
-header__link — ссылка;
-header__link_active — активная ссылка;
-header__logo — контейнер логотипа;
-header__logo-image — картинка с логотипом;
-address — контейнер с адресом;
-header__address — для выравнивания блока с адресом. В футере используется другое выравнивание. */
-
-
-/* .header {
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  padding: 92px 50px;
-  margin: 0;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.link {
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
-  letter-spacing: 1px;
-
-}
-.main-link {
-  text-decoration: none;
-}
-
-.header__menu {
-    display: flex;
-    flex: row;
-    justify-content: flex-start;
-    font-size: 18px;
-    gap: 1.1em;
-     text-indent: 0.2em;
-     letter-spacing: -6px;
-     
-text-transform: lowercase;
-  }
-
-
-
-  .header__menu li:nth-child(n+2) {
-    
-    list-style-type: circle;
-    letter-spacing: -6px;
- 
-    /* text-indent: 0.1em; */
-/* }
-.header__logo{
-  display: block;
-  min-width: 140px;
-
-} */ 
-  /* min-width: 1100px;
-  height: 292px;
- 
-  align-items: center;
- 
-  gap: 50px;
-  position: relative;
-  text-transform: lowercase;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: left;
-  text-underline-position: from-font;
-  word-spacing: 1px; */
-
-
-/* 
-
-.header-menu ol li {
-  text-indent: 0.2em;
-}
-
-.li-circle {
-  list-style-type: circle;
-}
-
-.logo-header {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 12.2%;
-  text-align: center;
-} */
-
-/* .adress {
-  max-width: 240px;
-  margin: auto;
-  align-self: end;
-  line-height: 25px;
+  justify-self: end;
+  line-height: 24.3px;
   text-transform: none;
 }
-
-.adress-header {
-
-} */
-
-/* .header ol:nth-child(3) {
-  position: absolute;
-  left: 72%;
-} */
-
-
-
 
 .main {
   flex: 1;
@@ -231,51 +113,55 @@ text-transform: lowercase;
 
 .text-block-hero {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  
 }
 
-.text-block-hero p {
+.text-block-hero h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   font-size: 100px;
   font-weight: 700;
   line-height: 115px;
   letter-spacing: 0.3em;
 }
 
-.text-block-hero p:nth-child(1) {
+.aligned-text-start {
   text-align: left;
 }
 
-.text-block-hero p:nth-child(2) {
+.aligned-text-center {
   text-align: center;
 }
 
-.text-block-hero p:nth-child(3) {
+.aligned-text-end {
   text-align: right;
 }
 
-.discription-button-hero {
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.hero-description {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 100px);
-  /* padding: 50px; */
+  width: calc(100% - 100px); 
   position: absolute;
   bottom: 50px;
-  /* left: 50px;
-  right: 50px; */
 }
 
-.discription-button-hero p {
+.hero-button-text {
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
   text-align: left;
-  word-spacing: 5px;
+  word-spacing: 18px;
   margin: 0;
 }
 
-.button-hero {
+.hero-button{
+  justify-self:flex-end;
   width: 256px;
   height: 51px;
   background: transparent;
@@ -284,6 +170,7 @@ text-transform: lowercase;
   font-size: 22px;
   font-weight: 500;
   line-height: 25.83px;
+  text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -316,6 +203,9 @@ h1 {
 
 .cards-block-link {
   padding: 30px 40px;
+  text-transform: lowercase;
+ 
+font-size: 20px;
 }
 
 .content {
@@ -379,17 +269,18 @@ h1 {
 }
 
 .info-section {
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  padding: 2px 24px 0;
 }
 
-.info-header {
+/* .info-header {
   display: flex;
   align-items: center;
-}
+} */
 
 .logo-container {
+  justify-self: center;
   width: 240px;
   height: 240px;
   background-color: black;
@@ -405,14 +296,23 @@ h1 {
   height: 148px;
   flex-shrink: 0;
   fill: white; /* Делаем логотип белым */
- 
 }
 
+
+
 .info-text {
-  padding-left: 359px;
+  padding: 116px 8px 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
+}
+
+.info-h1 {
+ padding-bottom: 86px;
 }
 
 .footer {
@@ -420,12 +320,16 @@ h1 {
   justify-content: space-between;
   align-content: top;
   align-content: center;
-  padding: 50px;
+  padding: 3px 50px 50px ;
   gap: 50px;
   font-size: 18px;
-  text-transform: lowercase;
+  
   text-underline-position: from-font;
   position: relative;
+}
+
+.footer-adress {
+  line-height: 24.3px;
 }
 
 .footer-menu {
@@ -433,6 +337,8 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  text-transform: lowercase;
+  line-height: 21px;
 }
 
 .social {
