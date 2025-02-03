@@ -1,18 +1,149 @@
+.pixel-perfect-image {
+  position: absolute;
+  width: 1100px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  filter: sepia(0.2);
+  pointer-events: none;
+  z-index: -1; 
+}
 
 
-.body {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-  
+
 .header {
-  display: flex;
-  min-width: 1100px;
-  height: 292px;
-  justify-content: baseline;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  padding: 84px 47px;
+  margin: 0;
   align-items: center;
-  padding: 90px 50px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.link {
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  letter-spacing: 1px;
+}
+
+.main-link {
+  text-decoration: none;
+}
+
+.header__menu {
+  font-size: 18px;
+  gap: 1em; /* Исправили точку */
+  text-indent: 0.2em;
+  letter-spacing: -0.03em; 
+  padding: 0; /* Убрали пробел */
+  text-transform: lowercase;
+  align-self: center;
+  justify-self: start;
+}
+
+.header__links-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.6em; 
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  letter-spacing: -0.09em; /* Убрали scaleX */
+}
+
+.header__links-list-item {
+  list-style-type: circle;
+}
+
+.header__logo {
+  display: block;
+  min-width: 140px;
+}
+
+.header__address {
+  max-width: 400px;
+  margin: 0;
+  align-self: center;
+  line-height: 25px;
+  text-transform: none;
+  padding-left: 50px;
+  margin-left: 30px;
+}
+
+
+
+/* header — вся шапка;
+header__menu — контейнер навигации;
+header__links-list — список ссылок;
+header__links-list-item — пункт списка ссылок;
+header__links-list-item_no-bullit — этот класс может потребоваться, чтобы сделать ссылку без кружочка;
+header__link — ссылка;
+header__link_active — активная ссылка;
+header__logo — контейнер логотипа;
+header__logo-image — картинка с логотипом;
+address — контейнер с адресом;
+header__address — для выравнивания блока с адресом. В футере используется другое выравнивание. */
+
+
+/* .header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  padding: 92px 50px;
+  margin: 0;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.link {
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  letter-spacing: 1px;
+
+}
+.main-link {
+  text-decoration: none;
+}
+
+.header__menu {
+    display: flex;
+    flex: row;
+    justify-content: flex-start;
+    font-size: 18px;
+    gap: 1.1em;
+     text-indent: 0.2em;
+     letter-spacing: -6px;
+     
+text-transform: lowercase;
+  }
+
+
+
+  .header__menu li:nth-child(n+2) {
+    
+    list-style-type: circle;
+    letter-spacing: -6px;
+ 
+    /* text-indent: 0.1em; */
+/* }
+.header__logo{
+  display: block;
+  min-width: 140px;
+
+} */ 
+  /* min-width: 1100px;
+  height: 292px;
+ 
+  align-items: center;
+ 
   gap: 50px;
   position: relative;
   text-transform: lowercase;
@@ -21,25 +152,18 @@
   line-height: 22px;
   text-align: left;
   text-underline-position: from-font;
-  word-spacing: 1px;
-  }
+  word-spacing: 1px; */
 
 
- 
-.header-menu ol {
-  display: flex;
-  justify-content: flex-start;
-  gap: 1.6em;
-  list-style-type: none;
-  }
+/* 
 
-  .header-menu ol li {
-    text-indent: 0.2em;
-  }
-  
+.header-menu ol li {
+  text-indent: 0.2em;
+}
+
 .li-circle {
   list-style-type: circle;
-  }
+}
 
 .logo-header {
   position: absolute;
@@ -47,69 +171,68 @@
   transform: translateX(-50%);
   max-width: 12.2%;
   text-align: center;
-}
+} */
 
-.contacts {
-  max-width: 22%;
+/* .adress {
+  max-width: 240px;
+  margin: auto;
+  align-self: end;
   line-height: 25px;
-  }
-
-.header ol:nth-child(3) {
-  position: absolute;
-  left: 72%;
-}
-
-.link {
-  text-underline-offset: 2px;
-  text-decoration-thickness: 1px;
-}
-.main-link {
-  text-decoration: none;
-  }
-
-.adress {
   text-transform: none;
 }
+
+.adress-header {
+
+} */
+
+/* .header ol:nth-child(3) {
+  position: absolute;
+  left: 72%;
+} */
+
+
+
+
 .main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 180px;
 }
 
 .hero {
   position: relative;
-  background: url('../images/cover.jpg') no-repeat center center;
+  background: url("../images/cover.jpg") no-repeat center center;
   background-size: cover;
   height: 757px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Важно: Поднимаем контент вверх */
-  
-  color: white;
- 
 
-  }
-  
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  .hero-content {
-    z-index: 1;
-    padding: 165px 50px 50px;
-    display: flex;
-    text-transform: uppercase;
-  }
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  z-index: 1;
+  padding: 165px 50px 50px;
+  display: flex;
+  text-transform: uppercase;
+}
 
 .text-block-hero {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-
 }
 
 .text-block-hero p {
@@ -117,34 +240,30 @@
   font-weight: 700;
   line-height: 115px;
   letter-spacing: 0.3em;
-
 }
 
 .text-block-hero p:nth-child(1) {
-
-  text-align: left; 
+  text-align: left;
 }
 
 .text-block-hero p:nth-child(2) {
-  text-align: center; 
+  text-align: center;
 }
 
 .text-block-hero p:nth-child(3) {
-  text-align: right; 
+  text-align: right;
 }
 
 .discription-button-hero {
-  
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   width: calc(100% - 100px);
   /* padding: 50px; */
   position: absolute;
-  bottom: 50px; 
+  bottom: 50px;
   /* left: 50px;
   right: 50px; */
-  
 }
 
 .discription-button-hero p {
@@ -182,7 +301,7 @@
 .section-cards {
   display: flex;
   flex-direction: column;
-  padding: 180px 24px;
+  padding: 180px 24px 120px;
 }
 
 h1 {
@@ -196,7 +315,7 @@ h1 {
 }
 
 .cards-block-link {
-  padding: 30px 40px ;
+  padding: 30px 40px;
 }
 
 .content {
@@ -232,36 +351,37 @@ h1 {
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: space-between; 
+  justify-content: space-between;
   height: 100%;
   color: white;
   z-index: 1;
 }
 
 .card-title {
-text-transform: uppercase;
-font-size: 22px;
-font-weight: 700;
-line-height: 26.4px;
-text-align: left;
-text-decoration-line: underline;
-text-underline-offset: 2px;
-text-decoration-thickness: 1px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }
 
 .card-description {
-font-family: Raleway;
-font-size: 20px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .info-section {
   display: flex;
   flex-direction: column;
+  padding: 24px;
 }
 
 .info-header {
@@ -270,7 +390,6 @@ text-decoration-skip-ink: none;
 }
 
 .logo-container {
-  padding-right: 30px;
   width: 240px;
   height: 240px;
   background-color: black;
@@ -278,18 +397,22 @@ text-decoration-skip-ink: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  padding: 34px;
 }
 
-.logo-main{
+.logo-main {
   width: 148px;
   height: 148px;
   flex-shrink: 0;
   fill: white; /* Делаем логотип белым */
+ 
 }
 
 .info-text {
   padding-left: 359px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .footer {
@@ -310,7 +433,7 @@ text-decoration-skip-ink: none;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  }
+}
 
 .social {
   flex: 0 0 33.3333%;
