@@ -19,13 +19,14 @@ body {
 
 .header {
   display: grid;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
   grid-template-columns: 1fr min-content 1fr;
   height: 293px;
   padding: 0px 47px 21px;
   margin: 0;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 400;
+ 
 }
 
 .link {
