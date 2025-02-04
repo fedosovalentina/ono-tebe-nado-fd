@@ -1,4 +1,4 @@
-.pixel-perfect-image {
+/* .pixel-perfect-image {
   position: absolute;
   width: 1100px;
   top: 0;
@@ -9,7 +9,7 @@
   pointer-events: none;
   z-index: 3;
   mix-blend-mode: color-dodge;
-}
+} */
 
 body {
   display: flex;
