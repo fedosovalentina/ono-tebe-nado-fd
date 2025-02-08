@@ -76,28 +76,29 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 757px;
-  padding: 165px 50px 50px;
   color: white;
   text-transform: uppercase;
   background: url("../images/cover.jpg") no-repeat center center;
   background-size: cover;
 }
 
-.hero::before {
-  content: "";
+.overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
 
 .hero__content {
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 106px;
   min-height: 100%;
+  padding: 165px 50px 50px;
 }
 
 .hero__textblock {
@@ -186,43 +187,36 @@ body {
 
 .cards__card {
   position: relative;
+  z-index: 0;
   flex-basis: 334px;
   min-height: 596px;
-  padding: 48px 40px;
-  overflow: hidden;
-  color: white;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.cards__card-1 {
+.cards__card-first {
   background-image: url("../images/card-lot-01.jpg");
 }
 
-.cards__card-2 {
+.cards__card-second {
   background-image: url("../images/card-lot-02.jpg");
 }
 
-.cards__card-3 {
+.cards__card-third {
   background-image: url("../images/card-lot-03.jpg");
 }
 
-.cards__card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-
 .cards__card-content {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding: 48px 40px;
+
+  color: white;
 }
 
 .cards__card-title {
