@@ -190,26 +190,25 @@ body {
   z-index: 0;
   flex-basis: 334px;
   min-height: 596px;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.cards__card-first {
+.cards__card-film {
   background-image: url("../images/card-lot-01.jpg");
 }
 
-.cards__card-second {
+.cards__card-book {
   background-image: url("../images/card-lot-02.jpg");
 }
 
-.cards__card-third {
+.cards__card-picture {
   background-image: url("../images/card-lot-03.jpg");
 }
 
 .cards__card-content {
-  z-index: 2;
+ 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -220,7 +219,7 @@ body {
 }
 
 .cards__card-title {
-  z-index: 1;
+  z-index: 2;
   font-weight: 700;
   font-size: 22px;
   line-height: 26.4px;
@@ -229,7 +228,7 @@ body {
 }
 
 .cards__card-description {
-  z-index: 1;
+  z-index: 2;
   text-decoration: none;
 }
 
